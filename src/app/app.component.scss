@@ -1,0 +1,18 @@
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movieInfo {
+    width:20%;
+    align-text: center;
+    margin:10px;
+}
+
+.title{
+    align-text: center;
+}
+.searchBar{
+    align-text: center;
+}
