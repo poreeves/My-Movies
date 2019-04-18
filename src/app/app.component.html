@@ -2,11 +2,14 @@
 <h1 class = 'title'>Movie Search
   </h1>
   
+  <app-nav></app-nav>
+  <app-categories></app-categories>
+  
   <div class = 'searchBar'>
   <input [(ngModel)] = 'value'>
   <button (click)= 'onClick()'> search</button>
   </div>
-  
+
   <div class = 'movieList'>
         <div *ngFor= 'let item of data' class = 'movieInfo'> 
         

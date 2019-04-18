@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MovieAppService } from './movie-app.service'
+import { MovieAppService } from './movie-app.service';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +11,14 @@ export class AppComponent {
   value;
   data = [];
   
+  
      constructor(public _movieApi: MovieAppService) {}
      
      onClick(){
-       this._movieApi.getMovie(this.value).subscribe((response: any) => {this.data = response.results})
+      this._movieApi.getMovie(this.value).subscribe((response: any) => {this.data = response.results})
      }
+     
+     
      
   
 }
