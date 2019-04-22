@@ -13,6 +13,13 @@ export class CategoriesComponent implements OnInit {
 
   constructor(public _movieApi: MovieAppService) { }
   
+  onCategoryClick(id){
+    this._movieApi.getGenre(id).subscribe((response: any) => {
+      console.log(response)
+      this._movieApi.data = response.results
+    })
+  }
+  
   onCategory(){
     this._movieApi.getCategories().subscribe((response: any) => {
       console.log(response)

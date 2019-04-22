@@ -1,0 +1,10 @@
+<p>
+  <button (click) = 'onInTheaters()'>In theaters </button>
+</p>
+
+<div class = 'nowPlayingList'>
+    <div *ngFor = 'let nowPlaying of nowPlaying'>
+        <p> {{nowPlaying.title}}</p>
+        <button (click) = 'onMovie(nowPlaying.id)'>{{nowPlaying.title}}</button>
+    </div>
+</div>

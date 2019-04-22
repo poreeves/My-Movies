@@ -1,0 +1,17 @@
+<p>
+  search works!
+</p>
+<div class = 'search'>
+    
+    <div class = 'movieList'>
+        <div *ngFor= 'let item of _movieApi.data' class = 'movieInfo'> 
+           <button (click) = 'onMovie(item.id)'> {{item.title}}</button>
+        <br>
+         <img src= 'https://image.tmdb.org/t/p/original{{item.poster_path}}' height="200" width="131">
+           
+        </div>
+        
+    
+        
+    </div>
+</div>

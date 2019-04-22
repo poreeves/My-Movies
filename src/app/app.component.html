@@ -1,20 +1,26 @@
 
-<h1 class = 'title'>Movie Search
-  </h1>
+<app-nav></app-nav>
+
+<br>
+<div class = 'all'> 
   
-  <app-nav></app-nav>
+  <div class = 'components'> 
+  
   <app-categories></app-categories>
   
-  <div class = 'searchBar'>
-  <input [(ngModel)] = 'value'>
-  <button (click)= 'onClick()'> search</button>
-  </div>
+  <router-outlet></router-outlet>
+  
 
-  <div class = 'movieList'>
-        <div *ngFor= 'let item of data' class = 'movieInfo'> 
-        
-       <p> {{item.title}}</p>
-       <img src= 'https://image.tmdb.org/t/p/original{{item.poster_path}}' height="200" width="131">
-         
-      </div>
-    </div>
+    <!--<div class = 'movieList'>-->
+    <!--    <div *ngFor= 'let item of _movieApi.data' class = 'movieInfo'> -->
+          
+    <!--     <p> {{item.title}}</p>-->
+    <!--     <img src= 'https://image.tmdb.org/t/p/original{{item.poster_path}}' height="200" width="131">-->
+           
+    <!--    </div>-->
+    <!--</div>-->
+    
+    <app-in-theaters></app-in-theaters>
+    
+  </div>  
+</div>

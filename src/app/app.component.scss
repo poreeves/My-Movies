@@ -1,3 +1,11 @@
+.all {
+    display: flex;
+    justify-content: space-between;
+.components {
+    display:flex;
+    justify-content: space-between;
+}    
+}
 .movieList {
     display: flex;
     flex-wrap: wrap;

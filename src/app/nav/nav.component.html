@@ -1,20 +1,25 @@
 
-<div class = "navBar">
-  <p>
-  nav works!
- 
-</p>
-
+  <div class = "navBar">
+     <div class = 'title'>
+         My Movies
+     </div>
+     <div class = 'search'>
+        <input [(ngModel)] = 'value'>
+         <button (click)= 'onSearch()'> search  </button>
+     </div>
     <div class = 'login'>
         <p>email
         <input [(ngModel)] = 'email'>
         password
         <input [(ngModel)] = 'password'>
+        <button (click) = 'onLogin()'> log in </button>
+        <a routerLink = 'registration'>registration </a>
         </p>
-         <button (click) = 'onLogin()'> log in </button>
+         
         
     </div>
   
     
     
 </div>
+  

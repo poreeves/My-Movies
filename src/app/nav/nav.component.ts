@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieAppService } from '../movie-app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,9 +11,15 @@ export class NavComponent implements OnInit {
   
   email: string = '';
   password: string = '';
+  value: string = '';
   
 
-  constructor(public _movieApi: MovieAppService) { }
+  constructor(public _movieApi: MovieAppService, private router: Router) { }
+  
+  onSearch(){
+      this._movieApi.getMovies(this.value).subscribe((response: any) => {this._movieApi.data = response.results})
+       this.router.navigate([`/search`]);
+     }
   
   onLogin(){
       this._movieApi.loginUser().subscribe((response: any) => {
@@ -22,6 +29,9 @@ export class NavComponent implements OnInit {
         this._movieApi.getUserId();
       })
      }
+     
+    
+     
      
   
 
