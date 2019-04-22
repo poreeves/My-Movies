@@ -13,9 +13,11 @@ export class MovieAppService {
   nowPlayingUrl: string = 'https://api.themoviedb.org/3/movie/now_playing?api_key=db0479c4a47b38fc5c1a3cde978bb2e4&language=en-US&page=1'
   movieUrl: string = 'https://api.themoviedb.org/3/movie/'
   apiKey: string = '?api_key=db0479c4a47b38fc5c1a3cde978bb2e4'
+  upcomingUrl: string = 'https://api.themoviedb.org/3/movie/upcoming?api_key=db0479c4a47b38fc5c1a3cde978bb2e4&language=en-US&page=1'
   
   data = [];
   nowPlaying = [];
+  displayMovie = [];
   
   user = {
     "firstName": "",
@@ -25,6 +27,10 @@ export class MovieAppService {
   }
 
   constructor( public _http: HttpClient ) { } 
+  
+  getUpcoming(){
+    return this._http.get(this.upcomingUrl)
+  }
   
   getMovies (value) {
     return this._http.get(this.baseUrl + value + this.endUrl)

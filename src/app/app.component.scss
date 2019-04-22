@@ -4,7 +4,16 @@
 .components {
     display:flex;
     justify-content: space-between;
-}    
+}
+.categories {
+    flex: 20%;
+}
+.router {
+    flex: 60%;
+}
+.inTheaters {
+    flex: 20%;
+}
 }
 .movieList {
     display: flex;

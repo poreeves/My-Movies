@@ -1,0 +1,10 @@
+<p>
+  display works!
+</p>
+<div *ngIf = '_movieApi.displayMovie' class = 'display'>
+    <div class = 'movieTitle'> {{_movieApi.displayMovie.title}}</div>
+    <div class = 'poster'> 
+    <img src= 'https://image.tmdb.org/t/p/original{{_movieApi.displayMovie.backdrop_path}}' width = 100%>
+    </div>
+    <div class = 'overview'>{{_movieApi.displayMovie.overview}}</div>
+</div>

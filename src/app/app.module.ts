@@ -15,6 +15,8 @@ import { RegistrationComponent } from './registration/registration.component';
 
 import { routes } from './app.router';
 import { SearchComponent } from './search/search.component';
+import { DisplayComponent } from './display/display.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SearchComponent } from './search/search.component';
     CategoriesComponent,
     InTheatersComponent,
     RegistrationComponent,
-    SearchComponent
+    SearchComponent,
+    DisplayComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

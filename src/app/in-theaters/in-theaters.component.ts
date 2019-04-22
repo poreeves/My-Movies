@@ -12,10 +12,13 @@ export class InTheatersComponent implements OnInit {
 
   constructor(public _movieApi: MovieAppService, private router: Router) { }
   
+  
+  
   onMovie(value){
     this._movieApi.getMovie(value).subscribe((response: any) => {
-      console.log(response)
-      
+      this._movieApi.displayMovie = response
+      console.log(this._movieApi.displayMovie)
+      this.router.navigate(['/display'])
     })
   }
   

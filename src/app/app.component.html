@@ -5,10 +5,14 @@
 <div class = 'all'> 
   
   <div class = 'components'> 
+      <div class = 'categories'>
+        <app-categories></app-categories>
+      </div>
   
-  <app-categories></app-categories>
-  
-  <router-outlet></router-outlet>
+      <div class = 'router'>
+           <router-outlet></router-outlet>
+      </div>
+ 
   
 
     <!--<div class = 'movieList'>-->
@@ -19,8 +23,10 @@
            
     <!--    </div>-->
     <!--</div>-->
+    <div class = 'inTheaters'>
+        <app-in-theaters></app-in-theaters>
+    </div>
     
-    <app-in-theaters></app-in-theaters>
     
   </div>  
 </div>
