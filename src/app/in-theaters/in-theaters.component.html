@@ -5,7 +5,11 @@
 
 <div class = 'nowPlayingList'>
     <div *ngFor = 'let nowPlaying of nowPlaying'>
-        <p> {{nowPlaying.title}}</p>
-        <button (click) = 'onMovie(nowPlaying.id)'>{{nowPlaying.title}}</button>
+        <ul>
+            <li>
+                <button class = 'movieTitles' (click) = 'onMovie(nowPlaying.id)'>{{nowPlaying.title}}</button>
+            </li>
+        </ul>
+        
     </div>
 </div>

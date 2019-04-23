@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieAppService } from '../movie-app.service';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -9,10 +10,10 @@ import { MovieAppService } from '../movie-app.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(public _movieApi: MovieAppService) { }
+  constructor(public _movieApi: MovieAppService, public _user: UserService) { }
   
   onPost() {
-    return this._movieApi.postUser().subscribe((response: any) => {console.log(this._movieApi.user)})
+    return this._user.postUser().subscribe((response: any) => {console.log(this._user.user)})
     
   }
 

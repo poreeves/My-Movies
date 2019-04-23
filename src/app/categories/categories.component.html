@@ -4,9 +4,9 @@
 
 <div class = "categoryList">
     <div *ngFor = 'let category of categories'>
-        <p>{{category.name}}</p>
-        <button (click) = 'onCategoryClick(category.id)'> {{category.name}} </button>
-        
+        <ul> 
+        <li> <button (click) = 'onCategoryClick(category.id)'> {{category.name}} </button> </li>
+        </ul>
     </div>
     
 </div>

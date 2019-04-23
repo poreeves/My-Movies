@@ -7,4 +7,7 @@
     <img src= 'https://image.tmdb.org/t/p/original{{_movieApi.displayMovie.backdrop_path}}' width = 100%>
     </div>
     <div class = 'overview'>{{_movieApi.displayMovie.overview}}</div>
+    <div class = 'favoritesButton'>
+        <button (click) = 'onAddFavorites()'>Add to Favorites</button>
+    </div>
 </div>

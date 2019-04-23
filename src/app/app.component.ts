@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieAppService } from './movie-app.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',

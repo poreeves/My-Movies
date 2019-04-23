@@ -7,18 +7,22 @@
         <input [(ngModel)] = 'value'>
          <button (click)= 'onSearch()'> search  </button>
      </div>
-    <div class = 'login'>
+    <div *ngIf = '!loggedIn' class = 'login'>
         <p>email
-        <input [(ngModel)] = 'email'>
+        <input [(ngModel)] = '_user.email'>
         password
-        <input [(ngModel)] = 'password'>
+        <input [(ngModel)] = '_user.password'>
         <button (click) = 'onLogin()'> log in </button>
         <a routerLink = 'registration'>registration </a>
-        <a routerLink = 'favorites'>Your Favorites</a>
         </p>
+    </div>    
+    
+    <div *ngIf = 'loggedIn' class = 'favoritesLink'>
+        <a routerLink = 'favorites'>Your Favorites</a>
+    </div>
          
         
-    </div>
+    
   
     
     

@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MovieAppService } from './movie-app.service'
+import { MovieAppService } from './movie-app.service';
+import { UserService } from './user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 
@@ -39,6 +40,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
   ],
   providers: [
     MovieAppService,
+    UserService
     ],
   bootstrap: [AppComponent]
 })
