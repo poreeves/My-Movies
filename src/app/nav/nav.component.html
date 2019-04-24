@@ -1,30 +1,28 @@
 
-  <div class = "navBar">
-     <div class = 'title'>
+ <div class = "navBar">
+    <div class = 'title'>
          My Movies
+    </div>
+     
+    <div class = 'search'>
+        <input [(ngModel)] = '_movieApi.search'>
+        <button (click)= 'onSearch()'> search  </button>
      </div>
-     <div class = 'search'>
-        <input [(ngModel)] = 'value'>
-         <button (click)= 'onSearch()'> search  </button>
-     </div>
+         
     <div *ngIf = '!loggedIn' class = 'login'>
         <p>email
         <input [(ngModel)] = '_user.email'>
         password
         <input [(ngModel)] = '_user.password'>
         <button (click) = 'onLogin()'> log in </button>
-        <a routerLink = 'registration'>registration </a>
+        <br>
+        <a routerLink = 'registration' class = 'registration'>New to My Movies? </a>
         </p>
     </div>    
     
     <div *ngIf = 'loggedIn' class = 'favoritesLink'>
-        <a routerLink = 'favorites'>Your Favorites</a>
+        Check out <a routerLink = 'favorites'>Your Favorites!</a>
     </div>
          
-        
-    
-  
-    
-    
 </div>
   

@@ -25,6 +25,7 @@ export class InTheatersComponent implements OnInit {
   onInTheaters() {
     this._movieApi.getNowPlaying().subscribe((response: any) => {this._movieApi.data = response.results})
        this.router.navigate([`/search`]);
+       this._movieApi.searchOn = false
   }
   
   onNowPlaying(){
@@ -34,6 +35,7 @@ export class InTheatersComponent implements OnInit {
   }
   ngOnInit() {
     this.onNowPlaying()
+    this.onInTheaters()
   }
 
 }

@@ -11,7 +11,8 @@ import { UserService } from '../user.service';
 })
 export class FavoritesComponent implements OnInit {
   
-  favorites = [];
+  favorites: any = [];
+  detailFavorites = [];
 
   constructor( public _movieApi: MovieAppService, private router: Router, public _user: UserService ) { }
   
@@ -19,6 +20,23 @@ export class FavoritesComponent implements OnInit {
     this._user.getFavorites().subscribe((response: any) => {
       console.log(response)
       this.favorites = response
+      console.log(this.favorites)
+    })
+  }
+  
+   onMovie(value){
+    this._movieApi.getMovie(value).subscribe((response: any) => {
+      this._movieApi.displayMovie = response
+      console.log(this._movieApi.displayMovie)
+      this.router.navigate(['/display'])
+  
+    })
+  }
+  
+  onDeleteFavorite(value) {
+    this._user.delelteFavorite(value).subscribe((response:any) => {
+      console.log(response)
+      this.onGetFavorites()
     })
   }
 

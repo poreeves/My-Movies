@@ -13,12 +13,15 @@ export class NavComponent implements OnInit {
   value: string = '';
   loggedIn: boolean = false;
   
+  
 
   constructor(public _movieApi: MovieAppService, private router: Router, public _user: UserService) { }
   
   onSearch(){
-      this._movieApi.getMovies(this.value).subscribe((response: any) => {this._movieApi.data = response.results})
+      this._movieApi.getMovies(this._movieApi.search).subscribe((response: any) => {this._movieApi.data = response.results})
+      console.log(this._movieApi.search)
        this.router.navigate([`/search`]);
+       this._movieApi.searchOn = true
   }
   
   onLogin(){

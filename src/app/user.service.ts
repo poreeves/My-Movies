@@ -54,6 +54,8 @@ export class UserService {
   getFavorites(){
      return this._http.get('http://mean-stack-2019-02-phil-phortonssf.c9users.io:8080/api/appUsers/' + sessionStorage.getItem('userId') + '/movies?access_token=' + sessionStorage.getItem('token'))
     }
-  
+  delelteFavorite(value){
+    return this._http.delete('http://mean-stack-2019-02-phil-phortonssf.c9users.io:8080/api/appUsers/' + sessionStorage.getItem('userId') + '/movies/' + value + '?access_token=' + sessionStorage.getItem('token'))
+  }
   
 }

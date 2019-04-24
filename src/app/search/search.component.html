@@ -1,11 +1,12 @@
-<p>
-  search works!
-</p>
+<div class = "searchHead">
+    <h2 *ngIf = '_movieApi.searchOn'> Your search results for {{_movieApi.search}}</h2>
+    <h2 *ngIf = '!_movieApi.searchOn'> Movies in Theaters Now!</h2>
+</div>
 <div class = 'search'>
     
     <div class = 'movieList'>
         <div *ngFor= 'let item of _movieApi.data' class = 'movieInfo'> 
-           <button (click) = 'onMovie(item.id)'> {{item.title}}</button>
+           <button (click) = 'onMovie(item.id)' class = 'movieTitle'> {{item.title}}</button>
         <br>
          <img src= 'https://image.tmdb.org/t/p/original{{item.poster_path}}' height="200" width="131">
            

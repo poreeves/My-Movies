@@ -1,10 +1,14 @@
-<p><button (click) = 'onGetFavorites()'>favorites</button></p>
+
+<div class = 'favoriteHead'>Your Favorite Movies!</div>
 <div class = 'favoritesList'>
-    <div *ngFor = 'let item of favorites'> 
-        <div class = 'favoriteDisplay'>
-            {{item.title}}
+    <div class = 'favoriteDisplay'>
+        <div *ngFor = 'let item of favorites' class = 'favoritesItem'> 
+        
+            <button (click) = 'onGetDetails(item.movieId)' class = 'favoriteTitle'> {{item.title}}</button>
+            <br>
+             <img src= 'https://image.tmdb.org/t/p/original{{item.image}}' height="200" width="131">
+             <br>
+             <button (click) = 'onDeleteFavorite(item.id)'>Remove Favorite</button>
         </div>
-    
-    
     </div>
 </div>

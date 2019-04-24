@@ -15,9 +15,11 @@ export class MovieAppService {
   apiKey: string = '?api_key=db0479c4a47b38fc5c1a3cde978bb2e4'
   
   
+  search: string = ''
   data = [];
   nowPlaying = [];
   displayMovie: any = {};
+  searchOn: boolean = false;
   
   user = {
     "firstName": "",

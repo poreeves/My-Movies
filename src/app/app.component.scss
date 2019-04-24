@@ -1,18 +1,27 @@
 .all {
     display: flex;
     justify-content: space-between;
+    background-color:rgb(255, 255, 230);
 .components {
     display:flex;
     justify-content: space-between;
+    margin: 1em;
+    
 }
 .categories {
-    flex: 20%;
+    flex: 17%;
+    margin-left: 1em;
+    
 }
 .router {
-    flex: 60%;
+    flex: 70%;
+    margin: 1em;
+    border: solid;
+    padding: 1em;
 }
 .inTheaters {
-    flex: 20%;
+    flex: 15%;
+    margin: 1em;
 }
 }
 .movieList {

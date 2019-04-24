@@ -7,3 +7,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.movieTitle {
+     background:none;
+     color:inherit;
+     border:none; 
+     padding:0;
+     font: inherit;
+     cursor: pointer;
+     word-wrap: break-word;
+     width:10em;
+}

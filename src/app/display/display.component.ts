@@ -17,7 +17,9 @@ export class DisplayComponent implements OnInit {
     let obj = {
     "title": this._movieApi.displayMovie.title,
     "movieId": this._movieApi.displayMovie.id,
-    "userId": sessionStorage.getItem('userId')
+    "userId": sessionStorage.getItem('userId'),
+    "image": this._movieApi.displayMovie.poster_path,
+    "overview": this._movieApi.displayMovie.overview
   }
   
     this._user.postFavorites(obj).subscribe((response: any) => console.log(response) )

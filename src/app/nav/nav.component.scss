@@ -1,9 +1,25 @@
 .navBar {
     display: flex;
     justify-content: space-around;
+    background-color: rgb(255, 109, 51);
+    border-bottom: 1rem solid;
+}
+input{
+    background-color:rgb(255, 255, 230);
 }
 
 .title {
     font-style: oblique;
     font-size: 40px;
+    margin: 24px;
+}
+.search{
+    margin: 24px;
+}
+.favoritesLink{
+    margin: 24px;
+    font-size:20px;
+}
+.login {
+    
 }

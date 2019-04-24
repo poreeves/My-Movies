@@ -1,0 +1,27 @@
+.favoriteHead {
+    font-size:40px;
+    padding-bottom:10px;
+}
+.favoritesList {
+    display: flex;
+    justify-content: space-between;
+}
+.favoriteDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.favoritesItem {
+    
+    justify-content: space-between;
+}
+.favoriteTitle {
+    background:none;
+     color:inherit;
+     border:none; 
+     padding:0;
+     font: inherit;
+     cursor: pointer;
+     word-wrap: break-word;
+     width:10em;
+}
