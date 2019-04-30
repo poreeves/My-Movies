@@ -31,7 +31,18 @@ export class NavComponent implements OnInit {
         sessionStorage.setItem('userId', response.userId);
         this._user.getUserId();
         this.loggedIn = true
+        console.log(this.loggedIn)
       })
+  }
+  
+  onLogout(){
+    this._user.logoutUser().subscribe((response: any) => {
+      console.log(response)
+      sessionStorage.clear
+      
+    })
+    this.loggedIn = false
+    console.log(this.loggedIn)
   }
 
   

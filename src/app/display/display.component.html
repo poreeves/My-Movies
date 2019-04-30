@@ -9,3 +9,17 @@
         <button (click) = 'onAddFavorites()'>Add to Favorites</button>
     </div>
 </div>
+<br>
+<br>
+<div class = 'wrap'>
+    <div class = 'similar'>
+        <div *ngFor = 'let similar of similarMovies' class = 'similarRow'>
+    
+        <button (click) = 'onMovie(similar.id)' class = 'similarTitle'> {{similar.title}}</button>
+        <br>
+         <img src= 'https://image.tmdb.org/t/p/original{{similar.poster_path}}' height="200" width="131">
+           
+       </div>
+    </div>
+
+</div>

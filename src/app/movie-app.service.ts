@@ -20,6 +20,8 @@ export class MovieAppService {
   nowPlaying = [];
   displayMovie: any = {};
   searchOn: boolean = false;
+  categoryOn: boolean = false;
+  categoryName: string = '';
   
   user = {
     "firstName": "",
@@ -30,7 +32,16 @@ export class MovieAppService {
 
   constructor( public _http: HttpClient ) { } 
   
-
+  
+  getSimilar(){
+    return this._http.get(this.movieUrl + this.displayMovie.id + "/similar?api_key=db0479c4a47b38fc5c1a3cde978bb2e4&language=en-US&page=1")
+  }
+  
+  
+  setCategoryName(name){
+    return this.categoryName = name
+    console.log(this.categoryName)
+  }
   
   getMovies (value) {
     return this._http.get(this.baseUrl + value + this.endUrl)

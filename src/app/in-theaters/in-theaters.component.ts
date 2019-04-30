@@ -26,6 +26,7 @@ export class InTheatersComponent implements OnInit {
     this._movieApi.getNowPlaying().subscribe((response: any) => {this._movieApi.data = response.results})
        this.router.navigate([`/search`]);
        this._movieApi.searchOn = false
+       this._movieApi.categoryOn = false
   }
   
   onNowPlaying(){

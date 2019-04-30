@@ -10,6 +10,8 @@ import { UserService } from '../user.service';
 })
 export class DisplayComponent implements OnInit {
   
+  similarMovies = []
+  
 
   constructor(public _movieApi: MovieAppService, private router: Router, public _user: UserService) { }
   
@@ -24,8 +26,17 @@ export class DisplayComponent implements OnInit {
   
     this._user.postFavorites(obj).subscribe((response: any) => console.log(response) )
   }
-
+  
+  onSimilar(){
+    this._movieApi.getSimilar().subscribe((response: any) => {
+      this.similarMovies = response.results
+      console.log(response)
+      console.log(this.similarMovies)
+      
+    })
+  }
   ngOnInit() {
+     this.onSimilar()
   }
 
 }

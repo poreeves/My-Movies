@@ -5,7 +5,7 @@
 <div class = "categoryList">
     <div *ngFor = 'let category of categories'>
         <ul> 
-        <li> <button (click) = 'onCategoryClick(category.id)'> {{category.name}} </button> </li>
+        <li> <button (click) = 'onCategoryClick(category.id, category.name)'> {{category.name}} </button> </li>
         </ul>
     </div>
     

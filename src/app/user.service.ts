@@ -58,4 +58,7 @@ export class UserService {
     return this._http.delete('http://mean-stack-2019-02-phil-phortonssf.c9users.io:8080/api/appUsers/' + sessionStorage.getItem('userId') + '/movies/' + value + '?access_token=' + sessionStorage.getItem('token'))
   }
   
+  logoutUser(){
+    return this._http.post('http://mean-stack-2019-02-phil-phortonssf.c9users.io:8080/api/appUsers/logout?access_token=' + sessionStorage.getItem('token'),{})
+  }
 }

@@ -14,11 +14,14 @@ export class CategoriesComponent implements OnInit {
 
   constructor( public _movieApi: MovieAppService, private router: Router) { }
   
-  onCategoryClick(id){
+  onCategoryClick(id,name){
     this._movieApi.getGenre(id).subscribe((response: any) => {
-      console.log(response)
+      // console.log(response)
       this._movieApi.data = response.results
       this.router.navigate(['/search'])
+      this._movieApi.setCategoryName(name)
+      this._movieApi.categoryOn = true
+      this._movieApi.searchOn = false
     })
   }
   

@@ -13,7 +13,7 @@
         <p>email
         <input [(ngModel)] = '_user.email'>
         password
-        <input [(ngModel)] = '_user.password'>
+        <input [(ngModel)] = '_user.password' type = 'password'>
         <button (click) = 'onLogin()'> log in </button>
         <br>
         <a routerLink = 'registration' class = 'registration'>New to My Movies? </a>
@@ -21,7 +21,9 @@
     </div>    
     
     <div *ngIf = 'loggedIn' class = 'favoritesLink'>
-        Check out <a routerLink = 'favorites'>Your Favorites!</a>
+        <div>Check out <a routerLink = 'favorites'>Your Favorites!</a> </div>
+        <div> <button (click) = 'onLogout()'> Log Out</button> </div>
+        
     </div>
          
 </div>

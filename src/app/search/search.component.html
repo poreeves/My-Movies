@@ -1,6 +1,7 @@
 <div class = "searchHead">
     <h2 *ngIf = '_movieApi.searchOn'> Your search results for {{_movieApi.search}}</h2>
-    <h2 *ngIf = '!_movieApi.searchOn'> Movies in Theaters Now!</h2>
+    <h2 *ngIf = '!_movieApi.searchOn && !_movieApi.categoryOn'> Movies in Theaters Now!</h2>
+    <h2 *ngIf = '!_movieApi.searchOn && _movieApi.categoryOn'> {{_movieApi.catergoryName}} Movies!</h2> 
 </div>
 <div class = 'search'>
     
